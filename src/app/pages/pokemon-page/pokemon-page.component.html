@@ -1,0 +1,25 @@
+<main class="p-3">
+    <form class="mb-3" [formGroup]="pokemonForm">
+        <div class="grid text-center">
+            <div class="col-2" style="font-size: xx-large; color: green">
+                Tú
+            </div>
+            <div class="col-3">
+                <app-pokemon-card [pokemon]="userPokemon"></app-pokemon-card>
+                <mat-form-field class="w-full" style="margin-top: 5px;">
+                    <input [formControl]="searchControl" matInput placeholder="Pokemon" />
+                </mat-form-field>
+                <label>La busqueda se realiza por nombre exacto</label>
+            </div>
+            <div class="col-2" style="font-size: xx-large">VS</div>
+            <div class="col-3" st>
+                <app-pokemon-card [pokemon]="comPokemon"></app-pokemon-card>
+                <button mat-raised-button color="warn" style="margin-top: 5px;" (click)="ngOnDestroy()">Elegir enemigo</button>
+            </div>
+            <div class="col-2" style="font-size: xx-large; color: red">
+                Enemigo
+            </div>
+        </div>
+    </form>
+
+</main>
